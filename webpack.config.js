@@ -53,13 +53,14 @@ const webpackConfig = {
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.svg(\?.*)?$/,
         use: [
           'url-loader',
-          'svg-transform-loader'
+          'svg-transform-loader',
+          'postcss-loader'
         ],
       },
       {

@@ -29,6 +29,8 @@
     "postcss-move-props-to-bg-image-query": "^1.0.1",
     "postcss-nested": "^4.1.2",
     "postcss-url": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "reset-css": "^4.0.1",
     "style-loader": "^0.23.1",
     "svg-transform-loader": "^2.0.7",
