@@ -11507,7 +11507,7 @@ object-assign
             {
                 type: 'markdown',
                 content:
-                    'Use vertical spacing utils for organisation your blocks, components and etc.\n\nLayout provide only CSS API for vertical spacing utils.',
+                    'Use vertical spacing hooks for organisation your blocks, components and etc.\n\nLayout provide only CSS API for vertical spacing hooks.',
             },
             {
                 type: 'code',

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../index.module.pcss'
+import { useOutsideMenuChecker } from "../../../hooks/useOutsideMenuChecker";
 
 export const TopMenuMobile = () => {
     const [openMenu, setOpenMenu] = useState(false)
@@ -8,11 +9,17 @@ export const TopMenuMobile = () => {
         setOpenMenu((prevState) => !prevState)
     }
 
+    const wrapperRef = useRef(null);
+
+    useOutsideMenuChecker(wrapperRef, () => setOpenMenu(false));
+
     return (
         <header
             className={`wt-container ${
                 openMenu ? 'top-menu__burger_open' : 'top-menu__burger'
             }`}
+            onMouseDown={() => false}
+            ref={wrapperRef}
         >
             {!openMenu && (
                 <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
@@ -39,7 +46,6 @@ export const TopMenuMobile = () => {
                     <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__main-logo_mobile">
                         <a
                             className="top-menu__main-logo-text"
-                            onClick={handleOpenMenu}
                         >
                             Toolbox
                         </a>
@@ -47,7 +53,6 @@ export const TopMenuMobile = () => {
                     <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__application_mobile">
                         <a
                             className="top-menu__application-text_mobile"
-                            onClick={handleOpenMenu}
                         >
                             Toolbox App
                         </a>
@@ -55,7 +60,6 @@ export const TopMenuMobile = () => {
                     <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__button_mobile">
                         <a
                             className="top-menu__button-text_mobile"
-                            onClick={handleOpenMenu}
                         >
                             Buy Now
                         </a>
