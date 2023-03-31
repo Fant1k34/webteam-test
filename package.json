@@ -30,6 +30,7 @@
     "postcss-move-props-to-bg-image-query": "^1.0.1",
     "postcss-nested": "^4.1.2",
     "postcss-url": "^8.0.0",
+    "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reset-css": "^4.0.1",
@@ -40,7 +41,8 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --port 5050",
-    "build": "cross-env NODE_ENV=production webpack -p --bail"
+    "build": "cross-env NODE_ENV=production webpack -p --bail",
+    "format": "prettier --write .\\app\\**\\*{.js|.jsx}"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.2",

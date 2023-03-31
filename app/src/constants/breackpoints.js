@@ -3,4 +3,4 @@ export const BREACKPOINTS = {
     MD: 1000,
     LG: 1276,
     XLG: 1540,
-};
+}
