@@ -604,6 +604,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@jetbrains/logos@^2.2.14":
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/@jetbrains/logos/-/logos-2.2.14.tgz#b14acecafa13a1784e4d6a37b735e2ee87b57675"
+  integrity sha512-oAlZaaWG7e6wllJ7oFR784i2pxHh6tfyOqW6Q3XROocThxt/Z113zdU7IwAEZ3NztJh0JaQaj66cm089vgwZOw==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
