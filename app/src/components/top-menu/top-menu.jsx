@@ -2,25 +2,28 @@ import React from "react";
 import './index.module.pcss';
 import { useLayoutEffect, useState } from 'react';
 import { TopMenuMobile } from "./top-menu-mobile/top-menu-mobile";
+import { BREACKPOINTS } from "../../constants/breackpoints";
 
 export const TopMenu = () => {
-    const [size, setSize] = useState([0, 0]);
+    const [width, setWidth] = useState(0);
 
     useLayoutEffect(() => {
-      function updateSize() {
-        setSize([window.innerWidth, window.innerHeight]);
+      const updateSize = () => {
+          setWidth(window.innerWidth);
       }
+
       window.addEventListener('resize', updateSize);
       updateSize();
+
       return () => window.removeEventListener('resize', updateSize);
     }, []);
 
-    if (size[0] <= 660) {
+    if (width <= BREACKPOINTS.SM) {
         return <TopMenuMobile></TopMenuMobile>;
     }
 
     return (
-          <div className="wt-container top-menu">
+          <menu className="wt-container top-menu">
             <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line">
               <div className="wt-col-2 top-menu__main-logo wt-col_align-self_baseline">
                 Toolbox
@@ -39,6 +42,6 @@ export const TopMenu = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </menu>
     );
 };
