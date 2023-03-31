@@ -1,0 +1,119 @@
+.all-products-section {
+    background-color: var(--wt-color-white);
+    padding-top: 161px;
+
+    @media (--sm) {
+        padding-top: 112px;
+    }
+
+    &__placeholder-image {
+        @media (--sm) {
+            margin-top: 64px;
+        }
+    }
+
+    &__placeholder {
+        width: 484px;
+        height: 368px;
+
+        @media (--md) {
+            width: 463px;
+            height: 352px;
+        }
+
+        @media (--sm) {
+            height: unset;
+            width: 329px;
+        }
+    }
+
+    &__image {
+        width: 466px;
+        height: 356px;
+        background-image: image-set(
+            url("..\..\..\static\all-tools-large\all-tools-1x.png") 1x,
+            url("..\..\..\static\all-tools-large\all-tools-2x.png") 2x,
+            url("..\..\..\static\all-tools-large\all-tools-3x.png") 3x);
+
+        @media (--md) {
+            width: 446px;
+            height: 341px;
+            background-image: image-set(
+                url("..\..\..\static\all-tools-medium\all-tools-1x.png") 1x,
+                url("..\..\..\static\all-tools-medium\all-tools-2x.png") 2x,
+                url("..\..\..\static\all-tools-medium\all-tools-3x.png") 3x);
+        }
+
+        @media (--sm) {
+            width: 317px;
+            height: 242px;
+            background-image: image-set(
+                url("..\..\..\static\all-tools-small\all-tools-1x.png") 1x,
+                url("..\..\..\static\all-tools-small\all-tools-2x.png") 2x,
+                url("..\..\..\static\all-tools-small\all-tools-3x.png") 3x);
+        }
+
+    }
+
+    &__info {
+        width: 484px;
+        height: 368px;
+
+        @media (--md) {
+            width: 463px;
+            height: 352px;
+        }
+
+        @media (--sm) {
+            width: 329px;
+        }
+    }
+
+    &__pack {
+        font-size: 60px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.07;
+        letter-spacing: -1.5px;
+        color: #27282c;
+    }
+
+    &__toolkit {
+        font-size: 28px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: #27282c;
+    }
+
+    &__button {
+        width: 174px;
+        height: 48px;
+        border-radius: 25px;
+        background-color: #f76707;
+        margin-right: 150px;
+
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__term {
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: rgba(39, 40, 44, 0.7);
+    }
+}
+
