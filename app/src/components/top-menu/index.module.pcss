@@ -7,7 +7,7 @@
     max-width: none;
     padding-left: 118px;
     padding-right: 119px;
-    
+
     @media (--md) {
         padding-left: 27px;
         padding-right: 24px;
@@ -128,6 +128,12 @@
         letter-spacing: normal;
         color: #f76707;
         cursor: pointer;
+    }
+
+    &__burger-animate {
+        transition-property: height;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(.73,.98,.73,.97);
     }
 
     &__burger {
