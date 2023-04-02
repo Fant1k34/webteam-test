@@ -19,6 +19,8 @@
         grid-template-columns: 72px 72px 72px;
         column-gap: 93px;
         row-gap: 48px;
+
+        justify-content: center;
     }
 
     &__ide {
@@ -58,8 +60,25 @@
         row-gap: 30px;
     }
 
-    &__ide-info {
+    &__ide-card-image_mobile {
+        width: 48px;
+        height: 48px;
 
+        margin-bottom: 12px;
+    }
+
+    &__ide-card-name_mobile {
+        height: 24px;
+
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: #27282c;
+
+        margin-bottom: 8px;
     }
 
     &__ide-name {
@@ -114,5 +133,36 @@
     &__image {
         width: 100%;
         height: 100%;
+    }
+
+    @media (--sm) {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row-gap: 22px;
+    }
+}
+
+.products-name-section {
+    &__info-table-name_mobile {
+        margin-top: 64px;
+        margin-bottom: 32px;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.56;
+        letter-spacing: normal;
+        color: rgba(39, 40, 44, 0.7);
+    }
+
+    &__table-name_mobile {
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: -0.39px;
+        color: #27282c;
     }
 }

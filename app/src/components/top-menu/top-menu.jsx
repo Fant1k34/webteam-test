@@ -1,25 +1,14 @@
 import React from 'react'
 import './index.module.pcss'
-import { useLayoutEffect, useState } from 'react'
 import { TopMenuMobile } from './top-menu-mobile/top-menu-mobile'
-import { BREACKPOINTS } from '../../constants/breackpoints'
+import { isMobile } from '../../../../utils/isMobile'
+import { useWidthUpdate } from '../../hooks/useWidthUpdate'
 
 export const TopMenu = () => {
-    const [width, setWidth] = useState(0)
+    useWidthUpdate()
 
-    useLayoutEffect(() => {
-        const updateSize = () => {
-            setWidth(window.innerWidth)
-        }
-
-        window.addEventListener('resize', updateSize)
-        updateSize()
-
-        return () => window.removeEventListener('resize', updateSize)
-    }, [])
-
-    if (width <= BREACKPOINTS.SM) {
-        return <TopMenuMobile></TopMenuMobile>
+    if (isMobile()) {
+        return <TopMenuMobile />
     }
 
     return (
