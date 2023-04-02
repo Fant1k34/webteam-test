@@ -1,22 +1,25 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../index.module.pcss'
-import { useOutsideMenuChecker } from "../../../hooks/useOutsideMenuChecker";
+import { useOutsideMenuChecker } from '../../../hooks/useOutsideMenuChecker'
 
 export const TopMenuMobile = () => {
     const [openMenu, setOpenMenu] = useState(false)
-    const [textBurgerMenuAvailable, setTextBurgerMenuAvailable] = useState(false);
+    const [textBurgerMenuAvailable, setTextBurgerMenuAvailable] =
+        useState(false)
 
     const handleOpenMenu = () => {
         setOpenMenu((prevState) => !prevState)
     }
 
-    const wrapperRef = useRef(null);
+    const wrapperRef = useRef(null)
 
     useEffect(() => {
-        wrapperRef.current.addEventListener('transitionend', () => setTextBurgerMenuAvailable((value) => !value))
+        wrapperRef.current.addEventListener('transitionend', () =>
+            setTextBurgerMenuAvailable((value) => !value)
+        )
     }, [])
 
-    useOutsideMenuChecker(wrapperRef, () => setOpenMenu(false));
+    useOutsideMenuChecker(wrapperRef, () => setOpenMenu(false))
 
     return (
         <header
@@ -49,24 +52,18 @@ export const TopMenuMobile = () => {
                         </a>
                     </div>
                     <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__main-logo_mobile">
-                        <a
-                            className="top-menu__main-logo-text"
-                        >
-                            { textBurgerMenuAvailable && 'Toolbox' }
+                        <a className="top-menu__main-logo-text">
+                            {textBurgerMenuAvailable && 'Toolbox'}
                         </a>
                     </div>
                     <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__application_mobile">
-                        <a
-                            className="top-menu__application-text_mobile"
-                        >
-                            { textBurgerMenuAvailable && 'Toolbox App' }
+                        <a className="top-menu__application-text_mobile">
+                            {textBurgerMenuAvailable && 'Toolbox App'}
                         </a>
                     </div>
                     <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__button_mobile">
-                        <a
-                            className="top-menu__button-text_mobile"
-                        >
-                            { textBurgerMenuAvailable && 'Buy Now' }
+                        <a className="top-menu__button-text_mobile">
+                            {textBurgerMenuAvailable && 'Buy Now'}
                         </a>
                     </div>
                 </>

@@ -1,17 +1,17 @@
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
 export const useOutsideMenuChecker = (ref, callbackOutside) => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (ref.current && !ref.current.contains(event.target)) {
-                callbackOutside();
+                callbackOutside()
             }
         }
 
-        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside)
 
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [ref]);
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [ref])
 }

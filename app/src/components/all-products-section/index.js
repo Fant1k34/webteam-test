@@ -1,3 +1,3 @@
-import { AllProductsSection } from "./all-products-section";
+import { AllProductsSection } from './all-products-section'
 
-export { AllProductsSection };
+export { AllProductsSection }
