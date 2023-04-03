@@ -20,7 +20,9 @@
         column-gap: 93px;
         row-gap: 48px;
 
-        justify-content: center;
+        @media (--md) {
+            justify-content: center;
+        }
     }
 
     &__ide {
@@ -128,6 +130,13 @@
                 margin-right: 10px;
             }
         }
+
+        &_mobile {
+            > * {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
     }
 
     &__image {
@@ -143,6 +152,12 @@
 }
 
 .products-name-section {
+    padding-bottom: 24px;
+
+    &_mobile {
+        width: 329px;
+    }
+
     &__info-table-name_mobile {
         margin-top: 64px;
         margin-bottom: 32px;

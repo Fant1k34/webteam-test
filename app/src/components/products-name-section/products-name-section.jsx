@@ -20,56 +20,57 @@ export const ProductsNameSection = () => {
 
     if (isMobile()) {
         return (
-            <section className="wt-container products-name-section">
-                <div className="products-name-section__info-table-name_mobile">
-                    Get access to all JetBrains desktop tools including 10 IDEs,
-                    2 extensions and 3 profilers
-                </div>
-                <div className="products-name-section__table-name_mobile">
-                    10 IDEs
-                </div>
-                <div className="products-name">
+            <div className="wt-container products-name-section products-name-section_mobile">
+                <header>
+                    <div className="products-name-section__info-table-name_mobile">
+                        Get access to&nbsp;all JetBrains desktop tools including 10&nbsp;IDEs, 2&nbsp;extensions and 3&nbsp;profilers
+                    </div>
+                    <div className="products-name-section__table-name_mobile">
+                        10 IDEs
+                    </div>
+                </header>
+                <article className="products-name">
                     {ides
                         .sort((a, b) => a.mobileIndex - b.mobileIndex)
                         .map((ide) => (
-                            <div>
-                                <div className="products-name__ide-card-image_mobile">
+                            <section>
+                                <figure className="products-name__ide-card-image_mobile">
                                     <img
                                         className="products-name__image"
                                         srcSet={`${ide.logoPath.oneX} 1x, ${ide.logoPath.twoX} 2x, ${ide.logoPath.threeX} 3x`}
                                         alt={`${ide.name} logo`}
                                     />
-                                </div>
+                                </figure>
                                 <div className="products-name__ide-card-name_mobile">
                                     {ide.name}
                                 </div>
-                                <div className="products-name__competencies">
+                                <div className="products-name__competencies products-name__competencies_mobile">
                                     {ide.competencies.map((competency) => (
                                         <div key={competency}>
                                             <div>{competency}</div>
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </section>
                         ))}
-                </div>
-            </section>
+                </article>
+            </div>
         )
     }
 
     return (
-        <section className="wt-container products-name-section">
+        <div className="wt-container products-name-section">
             <div className="wt-row products-name">
-                <div className="wt-col-auto-fill">
-                    <div className="products-name__table-name">10 IDEs</div>
-                    <div className="products-name__table">
+                <article className="wt-col-auto-fill">
+                    <header className="products-name__table-name">10 IDEs</header>
+                    <section className="products-name__table">
                         {ides
                             .sort(
                                 (a, b) =>
                                     a.desktopImageIndex - b.desktopImageIndex
                             )
                             .map((ide) => (
-                                <div
+                                <figure
                                     key={ide.id}
                                     className="products-name__ide"
                                 >
@@ -83,16 +84,15 @@ export const ProductsNameSection = () => {
                                         srcSet={`${ide.logoPath.oneX} 1x, ${ide.logoPath.twoX} 2x, ${ide.logoPath.threeX} 3x`}
                                         alt={`${ide.name} logo`}
                                     />
-                                </div>
+                                </figure>
                             ))}
-                    </div>
-                </div>
-                <div className="wt-col-auto-fill">
-                    <div className="products-name__info-table-name">
-                        Get access to all JetBrains desktop tools including 10
-                        IDEs, 2 extensions and 3 profilers
-                    </div>
-                    <div className="products-name__info-table">
+                    </section>
+                </article>
+                <article className="wt-col-auto-fill">
+                    <header className="products-name__info-table-name">
+                        Get access to&nbsp;all JetBrains desktop tools including 10&nbsp;IDEs, 2&nbsp;extensions and 3&nbsp;profilers
+                    </header>
+                    <section className="products-name__info-table">
                         {ides
                             .sort(
                                 (a, b) =>
@@ -120,9 +120,9 @@ export const ProductsNameSection = () => {
                                     </div>
                                 </div>
                             ))}
-                    </div>
-                </div>
+                    </section>
+                </article>
             </div>
-        </section>
+        </div>
     )
 }

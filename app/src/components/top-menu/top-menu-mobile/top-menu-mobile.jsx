@@ -30,43 +30,43 @@ export const TopMenuMobile = () => {
             ref={wrapperRef}
         >
             {!openMenu && (
-                <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
-                    <div className="wt-col-1 top-menu__overview_mobile">
+                <nav className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
+                    <section className="wt-col-1 top-menu__overview_mobile">
                         <span
                             className="top-menu__overview_mobile-text"
                             onClick={handleOpenMenu}
                         >
                             Overview
                         </span>
-                    </div>
-                </div>
+                    </section>
+                </nav>
             )}
             {openMenu && (
-                <>
-                    <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
+                <nav>
+                    <section className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
                         <a
                             className="top-menu__overview_mobile-text"
                             onClick={handleOpenMenu}
                         >
                             Overview
                         </a>
-                    </div>
-                    <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__main-logo_mobile">
+                    </section>
+                    <section className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__main-logo_mobile">
                         <a className="top-menu__main-logo-text">
                             {textBurgerMenuAvailable && 'Toolbox'}
                         </a>
-                    </div>
-                    <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__application_mobile">
+                    </section>
+                    <section className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__application_mobile">
                         <a className="top-menu__application-text_mobile">
                             {textBurgerMenuAvailable && 'Toolbox App'}
                         </a>
-                    </div>
-                    <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__button_mobile">
+                    </section>
+                    <section className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__button_mobile">
                         <a className="top-menu__button-text_mobile">
                             {textBurgerMenuAvailable && 'Buy Now'}
                         </a>
-                    </div>
-                </>
+                    </section>
+                </nav>
             )}
         </header>
     )

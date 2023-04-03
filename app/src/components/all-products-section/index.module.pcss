@@ -29,6 +29,7 @@
         @media (--sm) {
             height: unset;
             width: 329px;
+
         }
     }
 
@@ -71,6 +72,10 @@
 
         @media (--sm) {
             width: 329px;
+
+            > * {
+                margin-bottom: 16px;
+            }
         }
     }
 
@@ -82,6 +87,16 @@
         line-height: 1.07;
         letter-spacing: -1.5px;
         color: #27282c;
+
+        @media (--sm) {
+            font-size: 42px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.14;
+            letter-spacing: -1.05px;
+            color: #27282c;
+        }
     }
 
     &__toolkit {
@@ -92,6 +107,16 @@
         line-height: 1.43;
         letter-spacing: normal;
         color: #27282c;
+
+        @media (--sm) {
+            font-size: 24px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            color: #27282c;
+        }
     }
 
     &__button {
@@ -121,6 +146,16 @@
         line-height: 1.6;
         letter-spacing: normal;
         color: rgba(39, 40, 44, 0.7);
+
+        @media (--sm) {
+            font-size: 15px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.6;
+            letter-spacing: normal;
+            color: rgba(39, 40, 44, 0.7);
+        }
     }
 }
 

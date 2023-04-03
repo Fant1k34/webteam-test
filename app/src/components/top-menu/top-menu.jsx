@@ -14,10 +14,10 @@ export const TopMenu = () => {
     return (
         <menu className="wt-container top-menu">
             <div className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line">
-                <div className="wt-col-2 top-menu__main-logo wt-col_align-self_baseline">
+                <nav className="wt-col-2 top-menu__main-logo wt-col_align-self_baseline">
                     Toolbox
-                </div>
-                <div className="wt-col-10">
+                </nav>
+                <aside className="wt-col-10">
                     <div className="wt-row wt-row_align-items_baseline wt-row_justify_end">
                         <a className="top-menu__overview">
                             <span className="top-menu__overview-text">
@@ -35,7 +35,7 @@ export const TopMenu = () => {
                             </span>
                         </button>
                     </div>
-                </div>
+                </aside>
             </div>
         </menu>
     )
