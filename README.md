@@ -1,32 +1,24 @@
-## Running a project
-- To avoid build errors, please use node version 16.x
-- Install dependencies by navigating to the project's root folder and running the `yarn install` command
-- Start the development server by running the `yarn start` command
-- Access the server at [http://localhost:5050/](http://localhost:5050/)
+## Adaptive site for Jetbrains products
 
-## Working with the project
-- Find landing page at [http://localhost:5050/landing.html](http://localhost:5050/landing.html)
-- Find layout system page at [http://localhost:5050/layout-docs.html](http://localhost:5050/layout-docs.html)
-- If you need product logos, you can access them via [@jetbrains/logos](https://www.npmjs.com/package/@jetbrains/logos) package. Note that you have to install it manually.
+<img width="1665" alt="image" src="https://user-images.githubusercontent.com/45245696/229388598-883e4acd-28f2-428c-8c46-ece066a972bc.png">
 
-## Rules
-- Do not change the current file structure
-- Do not use jQuery
-- Do not use external layout libraries, only [http://localhost:5050/layout-docs.html](http://localhost:5050/layout-docs.html)
+<img width="1679" alt="image" src="https://user-images.githubusercontent.com/45245696/229388644-42ccae2f-7c31-4a2f-8c1d-d006d3e7ba55.png">
 
+<img width="372" alt="image" src="https://user-images.githubusercontent.com/45245696/229388728-8320ba8d-b85a-45cf-82c0-fd0c37a93c9b.png">
 
-- Use only PostCSS
-- Use breakpoints from `exterrnal-libs/breakpoints/index.css`. You can find usage example in `index.entry.pcss`
-- Use CSS variables
+<img width="374" alt="image" src="https://user-images.githubusercontent.com/45245696/229388749-7dbf1ddf-96bc-417a-8754-0169290c7c56.png">
 
-## Layout requirements 
-- Adaptivity: there should be desktop, tablet and mobile versions, but use desktop-first approach
-- Cross-browser compatibility: support for all modern browsers
-- Fonts: use standard system fonts
-- When scrolling, the site menu must stick to the top browser border
-- Make product section interactive. When the name of the product is hovered over, logo should stay opaque while other elements become semi-transparent. Product names must also become links. On mobile, element transparency should not be implemented. 
-- Behavior of interactive elements that are not specified in the design doc and readme.md is left up to you
-- You don't have to make forms interactive and can leave them as a static layout
+## Feetures:
 
-## Feedback
-- Be sure to mention problems that you've encountered
+- Custom navigation header with opening burger menu (for mobile)
+- Responsive images (for different screen sizes (small, medium, large and extra large) and resolutions) and blocks
+- Adaptive design
+- Onbording with different IDE by "onMouseOver" and "onMouseLeft" events
+
+## Stack:
+
+- JavaScript
+- React
+- HTML + CSS
+- Custom JB design system
+- Webpack, Prettier...
