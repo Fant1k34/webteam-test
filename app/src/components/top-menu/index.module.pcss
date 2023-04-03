@@ -121,6 +121,8 @@
 
     &__overview {
         &_mobile-text {
+            display: flex;
+            align-items: center;
             font-size: 15px;
             font-weight: normal;
             font-stretch: normal;
@@ -128,6 +130,16 @@
             line-height: 1.6;
             letter-spacing: normal;
             color: #27282c;
+
+            > * {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &_mobile-button_reverse {
+            rotate: 180deg;
         }
     }
 

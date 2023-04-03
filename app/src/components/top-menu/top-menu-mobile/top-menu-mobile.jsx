@@ -31,25 +31,35 @@ export const TopMenuMobile = () => {
         >
             {!openMenu && (
                 <nav className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
-                    <section className="wt-col-1 top-menu__overview_mobile">
-                        <span
+                    <section className="wt-col-2 top-menu__overview_mobile">
+                        <div
                             className="top-menu__overview_mobile-text"
                             onClick={handleOpenMenu}
                         >
-                            Overview
-                        </span>
+                            <span>Overview</span>
+                            <img
+                                className="top-menu__overview_mobile-button"
+                                src="../static/down-arror.svg"
+                                width="16px"
+                            />
+                        </div>
                     </section>
                 </nav>
             )}
             {openMenu && (
                 <nav>
                     <section className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__line_mobile">
-                        <a
+                        <div
                             className="top-menu__overview_mobile-text"
                             onClick={handleOpenMenu}
                         >
-                            Overview
-                        </a>
+                            <span>Overview</span>
+                            <img
+                                className="top-menu__overview_mobile-button top-menu__overview_mobile-button_reverse"
+                                src="../static/down-arror.svg"
+                                width="16px"
+                            />
+                        </div>
                     </section>
                     <section className="wt-row wt-row_size_0 wt-row_align-items_center top-menu__main-logo_mobile">
                         <a className="top-menu__main-logo-text">

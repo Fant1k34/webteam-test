@@ -23,7 +23,8 @@ export const ProductsNameSection = () => {
             <div className="wt-container products-name-section products-name-section_mobile">
                 <header>
                     <div className="products-name-section__info-table-name_mobile">
-                        Get access to&nbsp;all JetBrains desktop tools including 10&nbsp;IDEs, 2&nbsp;extensions and 3&nbsp;profilers
+                        Get access to&nbsp;all JetBrains desktop tools including
+                        10&nbsp;IDEs, 2&nbsp;extensions and 3&nbsp;profilers
                     </div>
                     <div className="products-name-section__table-name_mobile">
                         10 IDEs
@@ -62,7 +63,9 @@ export const ProductsNameSection = () => {
         <div className="wt-container products-name-section">
             <div className="wt-row products-name">
                 <article className="wt-col-auto-fill">
-                    <header className="products-name__table-name">10 IDEs</header>
+                    <header className="products-name__table-name">
+                        10 IDEs
+                    </header>
                     <section className="products-name__table">
                         {ides
                             .sort(
@@ -90,7 +93,8 @@ export const ProductsNameSection = () => {
                 </article>
                 <article className="wt-col-auto-fill">
                     <header className="products-name__info-table-name">
-                        Get access to&nbsp;all JetBrains desktop tools including 10&nbsp;IDEs, 2&nbsp;extensions and 3&nbsp;profilers
+                        Get access to&nbsp;all JetBrains desktop tools including
+                        10&nbsp;IDEs, 2&nbsp;extensions and 3&nbsp;profilers
                     </header>
                     <section className="products-name__info-table">
                         {ides
